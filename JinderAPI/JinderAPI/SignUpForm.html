@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+        function CopyMe(oFileInput, sTargetID) {
+             document.getElementById(sTargetID).value = oFileInput.value;
+        }
+    </script>
+    <style>
+        .register {
+            background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+            margin-top: 3%;
+            padding: 3%;
+        }
+
+        .register-left {
+            color: #fff;
+        }
+
+            .register-left input {
+                border: none;
+                border-radius: 1.5rem;
+                padding: 2%;
+                width: 60%;
+                background: #f8f9fa;
+                font-weight: bold;
+                color: #383d41;
+                margin-top: 30%;
+                margin-bottom: 3%;
+                cursor: pointer;
+            }
+
+        .register-right {
+            background: #f8f9fa;
+            border-top-left-radius: 10% 50%;
+            border-bottom-left-radius: 10% 50%;
+        }
+
+        .register-left img {
+            margin-top: 15%;
+            margin-bottom: 5%;
+            width: 25%;
+            -webkit-animation: mover 2s infinite alternate;
+            animation: mover 1s infinite alternate;
+        }
+
+        @-webkit-keyframes mover {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes mover {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .register-left p {
+            font-weight: lighter;
+            padding: 12%;
+            margin-top: -9%;
+        }
+
+
+
+        .btnRegister {
+            float: right;
+            margin-top: 10%;
+            border: none;
+            border-radius: 1.5rem;
+            padding: 2%;
+            background: #0062cc;
+            color: #fff;
+            font-weight: 600;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .btn-br {
+            border: none;
+            border-radius: 1.5rem;
+            background: #00c6ff;
+            color: #fff;
+            font-weight: 600;
+            width: 50%;
+            cursor: pointer;
+        }
+
+
+        .register .nav-tabs {
+            margin-top: 3%;
+            border: none;
+            background: #0062cc;
+            border-radius: 1.5rem;
+            width: 28%;
+            float: right;
+        }
+
+            .register .nav-tabs .nav-link {
+                padding: 2%;
+                height: 34px;
+                font-weight: 600;
+                color: #fff;
+                border-top-right-radius: 1.5rem;
+                border-bottom-right-radius: 1.5rem;
+            }
+
+                .register .nav-tabs .nav-link:hover {
+                    border: none;
+                }
+
+                .register .nav-tabs .nav-link.active {
+                    width: 100px;
+                    color: #0062cc;
+                    border: 2px solid #0062cc;
+                    border-top-left-radius: 1.5rem;
+                    border-bottom-left-radius: 1.5rem;
+                }
+
+        .register-heading {
+            text-align: center;
+            margin-top: 8%;
+            margin-bottom: -15%;
+            color: #495057;
+        }
+    </style>
+
+</head>
+
+
+<body style="background-color:aliceblue">
+    <form>
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+
+                    <h2>Welcome To JINDER API</h2>
+                    <input type="submit" name="" value="Login" /><br />
+                </div>
+                <div class="col-md-9 register-right">
+                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="Seeker-tab" data-toggle="tab" href="#Seeker" role="tab" aria-controls="Seeker" aria-selected="true">Seeker</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="Poster-tab" data-toggle="tab" href="#Poster" role="tab" aria-controls="Poster" aria-selected="false">Poster</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="Seeker" role="tabpanel" aria-labelledby="Seeker-tab">
+                            <h3 class="register-heading">Apply as a Job Seeker</h3>
+
+
+                            <div class="row" style="padding: 10%; margin-top: 10%;">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="SeekerFullName" class="form-control" placeholder="Full Name *" />
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="date" id="SeekerDateOfBirth" class="form-control" placeholder="Date Of Birth *" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="SeekerProfilePicture" class="form-control" readonly="readonly" placeholder="Profile Picture *" />
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input id="Seekerbrowseppic" type="file" onchange="CopyMe(this, 'SeekerProfilePicture');" />
+                                        <!-- <input id="browseppic" type="button" value="Browse" class="btn-br" />-->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="maxl">
+                                            <label class="radio inline">
+                                                <input type="radio" name="Seekergender" value="male">
+                                                <span> Male </span>
+                                            </label>
+                                            <label class="radio inline">
+                                                <input type="radio" name="Seekergender" value="female">
+                                                <span>Female </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="SeekerAddress" class="form-control" placeholder="Address*" />
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="SeekerEducation" class="form-control" placeholder="Education*" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="SeekerExperience" class="form-control" placeholder="Experience*" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="SeekerSkills" class="form-control" placeholder="Skills*" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="SeekerCertification" class="form-control" placeholder="Certification*" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="SeekerUsername" class="form-control" placeholder="Username*" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" id="SeekerPassword" class="form-control" placeholder="Password*" />
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="button" id="SeekerbtnRegister" value="Sign Up" />
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="tab-pane fade show" id="Poster" role="tabpanel" aria-labelledby="Poster-tab">
+                            <h3 class="register-heading">Apply as a Job Poster</h3>
+                            <div class="row" style="padding:10%; margin-top: 10%;">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="PosterFullName" class="form-control" placeholder="Full Name *" />
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="date" id="PosterDateOfBirth" class="form-control" placeholder="Date Of Birth *" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="PosterProfilePicture" class="form-control" readonly="readonly" placeholder="Profile Picture *" />
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input id="Posterbrowseppic" type="file" onchange="CopyMe(this, 'PosterProfilePicture');" />
+                                        <!-- <input id="browseppic" type="button" value="Browse" class="btn-br" />-->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="maxl">
+                                            <label class="radio inline">
+                                                <input type="radio" name="Postergender" value="male">
+                                                <span> Male </span>
+                                            </label>
+                                            <label class="radio inline">
+                                                <input type="radio" name="Postergender" value="female">
+                                                <span>Female </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="PosterAddress" class="form-control" placeholder="Address*" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="PosterRequiredSkills" class="form-control" placeholder="RequiredSkills*" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="PosterJobDescription" class="form-control" placeholder="JobDescription*" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="PosterSalaryRange" class="form-control" placeholder="SalaryRange*" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="PosterOperationHours" class="form-control" placeholder="OperationsHours*" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="PosterLocation" class="form-control" placeholder="Location*" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="PosterUsername" class="form-control" placeholder="Username*" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" id="PosterPassword" class="form-control" placeholder="Password*" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="button" id="PosterbtnRegister" value="Sign Up" />
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+    $(function () {
+        // $('form').submit(function () {
+        $('#SeekerbtnRegister').click(function () {
+            var juser = {
+                FullName: $('#SeekerFullName').val(),
+                DateOfBirth:$('#SeekerDateOfBirth').val(),
+                ProfilePicture: $('#SeekerProfilePicture').val(),
+                Gender: $("input[name='Seekergender']:checked").attr("value"),
+                Address:$('#SeekerAddress').val(),
+                UserType: "Seeker",
+                Username: $('#SeekerUsername').val(),
+                Password: $('#SeekerPassword').val(),
+                Education:$('#SeekerEducation').val(),
+                Experience:$('#SeekerExperience').val(),
+                Skills:$('#SeekerSkills').val(),
+                Certification: $('#SeekerCertificaiton').val(),
+                
+            };
+            $.ajax({
+                url: "PostNewSeekerUser",
+                type: "POST",
+                data: JSON.stringify(juser),
+                statusCode:{
+                    200: function () { alert("User saved successfuly") },
+                    409: function () { alert("User "+ juser.Username + " already exists") },
+                //    204:alert("no content")
+                } ,
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    $('#result').html(result);
+                }
+            });
+            return false;
+        });
+    });
+
+    $(function () {
+        // $('form').submit(function () {
+        $('#PosterbtnRegister').click(function () {
+            var juser = {
+                FullName: $('#PosterFullName').val(),
+                DateOfBirth: $('#PosterDateOfBirth').val(),
+                ProfilePicture: $('#PosterProfilePicture').val(),
+                Gender: $("input[name='Postergender']:checked").attr("value"),
+                Address: $('#PosterAddress').val(),
+                UserType: "Poster",
+                Username: $('#PosterUsername').val(),
+                Password: $('#PosterPassword').val(),
+                RequiredSkills: $('#PosteRequiredSkills').val(),
+                JobDescription: $('#PosterJobDescription').val(),
+                SalaryRange: $('#PosterSalaryRange').val(),
+                OperationHours: $('#PosterOperationHours').val(),
+                Location: $('#PosterLocation').val(),
+
+            };
+            $.ajax({
+                url: "PostNewPosterUser",
+                type: "POST",
+                data: JSON.stringify(juser),
+                statusCode: {
+                    200: function () { alert("User saved successfuly") },
+                    409: function () { alert("User " + juser.Username + " already exists") },
+                    //    204:alert("no content")
+                },
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    $('#result').html(result);
+                }
+            });
+            return false;
+        });
+    });
+
+</script>

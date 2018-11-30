@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JinderAPI", "JinderAPI\JinderAPI.csproj", "{AC5F7D00-6DF6-4C50-8BEE-D828371B6E24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinder_API", "Jinder_API\Jinder_API.csproj", "{DA1CC0CF-2455-4FC1-B232-129D18253E54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC5F7D00-6DF6-4C50-8BEE-D828371B6E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC5F7D00-6DF6-4C50-8BEE-D828371B6E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC5F7D00-6DF6-4C50-8BEE-D828371B6E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC5F7D00-6DF6-4C50-8BEE-D828371B6E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA1CC0CF-2455-4FC1-B232-129D18253E54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA1CC0CF-2455-4FC1-B232-129D18253E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA1CC0CF-2455-4FC1-B232-129D18253E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA1CC0CF-2455-4FC1-B232-129D18253E54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

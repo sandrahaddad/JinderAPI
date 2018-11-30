@@ -1,0 +1,157 @@
+﻿@model JinderAPI.JinderUser
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignUpView</title>
+</head>
+<body style="background-color:aliceblue">
+
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+
+                <h2>Welcome To JINDER API</h2>
+                <!-- <input type="submit" name="" value="Login" /><br />-->
+            </div>
+            <div class="col-md-9 register-right">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="Seeker-tab" data-toggle="tab" href="#Seeker" role="tab" aria-controls="Seeker" aria-selected="true">Seeker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Poster-tab" data-toggle="tab" href="#Poster" role="tab" aria-controls="Poster" aria-selected="false">Poster</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="Seeker" role="tabpanel" aria-labelledby="Seeker-tab">
+                        <h3 class="register-heading">Apply as a Job Seeker</h3>
+
+
+                        <div class="row" style="padding: 10%; margin-top: 10%;">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id="FullName" class="form-control" placeholder="Full Name *" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="date" id="DateOfBirth" class="form-control" placeholder="Date Of Birth *" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id="ProfilePicture" class="form-control" readonly="readonly" placeholder="Profile Picture *" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input id="browseppic" type="file" onchange="CopyMe(this, 'ProfilePicture');" />
+                                    <!-- <input id="browseppic" type="button" value="Browse" class="btn-br" />-->
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="maxl">
+                                        <label class="radio inline">
+                                            <input type="radio" name="gender" value="male">
+                                            <span> Male </span>
+                                        </label>
+                                        <label class="radio inline">
+                                            <input type="radio" name="gender" value="female">
+                                            <span>Female </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id="Address" class="form-control" placeholder="Address*" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            </div>
+
+                            <div class="col-md-6">
+                                <input type="submit" class="btnRegister" value="Sign Up" />
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="tab-pane fade show" id="Poster" role="tabpanel" aria-labelledby="Poster-tab">
+                        <h3 class="register-heading">Apply as a Job Poster</h3>
+                        <div class="row" style=" padding 10%; margin-top 10%;">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id="FullName" class="form-control" placeholder="Full Name *" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="date" id="DateOfBirth" class="form-control" placeholder="Date Of Birth *" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id="ProfilePicture" class="form-control" readonly="readonly" placeholder="Profile Picture *" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input id="browseppic" type="file" onchange="CopyMe(this, 'ProfilePicture');" />
+                                    <!-- <input id="browseppic" type="button" value="Browse" class="btn-br" />-->
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="maxl">
+                                        <label class="radio inline">
+                                            <input type="radio" name="gender" value="male">
+                                            <span> Male </span>
+                                        </label>
+                                        <label class="radio inline">
+                                            <input type="radio" name="gender" value="female">
+                                            <span>Female </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id="Address" class="form-control" placeholder="Address*" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            </div>
+
+                            <div class="col-md-6">
+                                <input type="submit" class="btnRegister" value="Sign Up" />
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+</html>
